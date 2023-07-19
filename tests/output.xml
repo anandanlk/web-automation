@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20230719 16:43:10.091" rpa="false" schemaversion="4">
+<suite id="s1" name="Test1" source="C:\web-automation\tests\test1.robot">
+<test id="s1-t1" name="test1" line="5">
+<kw name="sample1">
+<msg timestamp="20230719 16:43:10.154" level="FAIL">No keyword with name 'sample1' found.</msg>
+<status status="FAIL" starttime="20230719 16:43:10.154" endtime="20230719 16:43:10.154"/>
+</kw>
+<status status="FAIL" starttime="20230719 16:43:10.154" endtime="20230719 16:43:10.169">No keyword with name 'sample1' found.</status>
+</test>
+<status status="FAIL" starttime="20230719 16:43:10.107" endtime="20230719 16:43:10.169"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test1">Test1</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230719 16:43:10.154" level="ERROR">Error in file 'C:\web-automation\tests\test1.robot' on line 2: Importing library 'C:\web-automation\libraries\sample.py' failed: ModuleNotFoundError: No module named 'core'
+Traceback (most recent call last):
+  File "C:\web-automation\libraries\sample.py", line 1, in &lt;module&gt;
+    from core import seleniuminterface
+PYTHONPATH:
+  C:\web-automation\libraries
+  C:\Python\Python311\Scripts\robot.exe
+  C:\Python\Python311\python311.zip
+  C:\Python\Python311\DLLs
+  C:\Python\Python311\Lib
+  C:\Python\Python311
+  C:\Python\Python311\Lib\site-packages</msg>
+</errors>
+</robot>
