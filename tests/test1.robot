@@ -1,6 +1,6 @@
-****** Settings ***
-Library    ../libraries/sample.py
+*** Settings ***
+Library  ../libraries/modules/Sample.py
 
-**** Test Cases ***
+*** Test Cases ***
 test1
-    sample1
+    Sample1
