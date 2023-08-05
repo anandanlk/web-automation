@@ -1,0 +1,7 @@
+{
+"welcome": {
+  "path": "",
+  "Checkboxes": {"locator": "xpath", "value": "//a[@href='/checkboxes']"},
+  "Dropdown": {"type": "xpath", "value": "//a[@href='/dropdown']"}
+}
+}
