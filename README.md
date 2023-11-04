@@ -1,3 +1,5 @@
 # web-automation
 
-This provides standard libraries for web automation using Python -Selenium framework and it is integrated to RobotFramework to enable Key word driven automation framework and reports
+This repository provides standard libraries for web automation using the Python Selenium framework. It is integrated with Robot Framework to enable a keyword-driven automation framework and generate reports.
+
+Note: The framework can be used now, but there are a few missing Selenium libraries, and I will continue to add more libraries.
