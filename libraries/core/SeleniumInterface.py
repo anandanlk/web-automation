@@ -154,9 +154,16 @@ class SeleniumInterface:
             else:
                 self.action.move_to_element_with_offset(_element, offset[0], offset[1]).click().perform()
             print(f"Successfully clicked the button {element_key}")
-        except Exception as msg:
+        except Exception as e:
             raise AssertionError(
-                f'def:move_to_element_and_click() - Unable to Click the element {element_key} -> {msg}')
+                f'def:move_to_element_and_click() - Unable to Click the element {element_key} -> {e}')
+
+    def is_checkbox_checked(self, element_key):
+        try:
+            print(f'Getting the Checkbox status for - {element_key}')
+            return self.find_web_element(element_key).is_selected()
+        except Exception as e:
+            raise AssertionError(f'def:is_checkbox_checked() - Unable to get the status of Checkbox -> {e}')
 
     def check_checkbox(self, element_key):
         try:
@@ -165,5 +172,22 @@ class SeleniumInterface:
             if not _element.is_selected():
                 _element.click()
             print(f'Successfully Checked the checkbox - {element_key}')
-        except Exception as msg:
-            raise AssertionError(f'def:check_checkbox() - Unable to Check the Checkbox -> {msg}')
+        except Exception as e:
+            raise AssertionError(f'def:check_checkbox() - Unable to Check the Checkbox -> {e}')
+
+    def uncheck_checkbox(self, element_key):
+        try:
+            print(f'Unchecking the Checkbox - {element_key}')
+            _element = self.find_web_element(element_key)
+            if _element.is_selected():
+                _element.click()
+            print(f'Successfully Unchecked the checkbox - {element_key}')
+        except Exception as e:
+            raise AssertionError(f'def:uncheck_checkbox() - Unable to Uncheck the Checkbox -> {e}')
+
+    def ews_get_body_text(self):
+        try:
+            return self.browser.find_element_by_tag_name('body').text
+        except Exception as e:
+            raise AssertionError(f'def:ews_get_body_text() - Unable to get body text -> {e}')
+        
